@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Doge Press</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <p class="brand">Doge Press</p>
+        <div class="progress">
+          <p>{{percent}}% Complete</p>
+          <p style="margin-left: 20px;">{{time}} Left</p>
+        </div>
+        <div class="file-input">
+          <input
+            type="file"
+            name="file"
+            id="file"
+            class="inputfile"
+            accept="video/*"
+            v-on:change="fileInput"
+          />
+          <label for="file">
+            <div class="label-elm">
+              <i data-feather="upload"></i>
+              <p style="color: #67d672;">Upload</p>
+            </div>
+          </label>
+        </div>
+      </nav>
+
+      <div class="body">
+        <video src="" class="video" autoplay controls></video>
+        <div class="form">
+          <label for="" class="name">Output File Name</label>
+          <input
+            type="text"
+            class="input"
+            v-model="outFileName"
+            placeholder="Output file name"
+          />
+          <label for="" class="name">Output Extension {{outFileExt}}</label>
+          <select name="" id="" v-model="outFileExt" value="{{outFileExt}}">
+            <option value=".mp4">MP4</option>
+            <option value=".avi">AVI</option>
+            <option value=".mkv">MKV</option>
+          </select>
+
+          <label for="" class="name">Compression Preset</label>
+          <select name="" id="" v-model="preset" value="{{preset}}">
+            <option value="Very Fast 480p30">Very Fast 480p30</option>
+            <option value="Very Fast 720p30">Very Fast 720p30</option>
+            <option value="Very Fast 1080p30">Very Fast 1080p30</option>
+          </select>
+          <label for="" class="name">Choose Output Folder</label>
+          <p id="out-path">{{outDir}}</p>
+          <button @click="selectDirStart">Choose Folder</button>
+          <button @click="startCompress">Compress</button>
+        </div>
+      </div>
+    </div>
+    <script src="./render.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

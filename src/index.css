@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 80%;
+  height: 10vh;
+  position: absolute;
+  top: 2vh;
+  left: 10%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #272739;
+  border-radius: 3px;
+  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.brand {
+  color: #67d672;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #67d672;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.label-elm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.label-elm svg {
+  margin-right: 15px;
+}
+
+.inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.video {
+  width: 400px;
+  background-color: #272739;
+  border: 2px solid #272739;
+  border-radius: 3px;
+}
+
+.body {
+  position: absolute;
+  top: 14vh;
+  left: 10%;
+
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #272739;
+  margin: 5px 0;
+}
+
+.input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #272739;
+}
+
+button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  background-color: #272739;
+  color: #67d672;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+select {
+  width: 100%;
+  margin: 5px 0;
+  padding: 15px 12px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  .video {
+    width: 50%;
+  }
+}
+
+.progress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #67d672;
+}
